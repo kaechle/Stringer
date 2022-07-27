@@ -7,17 +7,21 @@
 
         {{!-- CSS and JS with asset helper--}}
         <link rel="stylesheet" href="{{asset "built/app.css"}}" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;1,400;1,600&family=Cabin:wght@400;600&family=Signika+Negative:wght@600;700&display=swap" rel="stylesheet">
+
         <script src="{{asset "built/app.js"}}" defer></script>
 
         {{!-- contentFor/block scripts - use with defer --}}
         {{{block "scripts"}}}
-        
+
         {{!-- Outputs important meta data and settings, should always be in <head> --}}
         {{ghost_head}}
     </head>
 
     <body class="{{body_class}}">
-        
+
         <div class="grid">
             {{!-- Navbar partial --}}
             {{> "navbar"}}
